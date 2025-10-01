@@ -1,29 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hong Kee</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        h1 {
-            color: white;
-            font-size: 4rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hong Kee</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VerifyFlow - Secure Payment Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>VerifyFlow</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h2>Stop Payment Fraud. Verify Before You Pay.</h2>
+            <p>
+              Ensure your international and domestic trade payments always reach
+              the right bank account.
+            </p>
+            <a href="#how-it-works" class="btn btn-primary btn-large">Learn More</a>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+              alt="Secure Payment Verification"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section id="problem" class="section-alt">
+        <div class="container">
+          <h3>The Problem: Trusting Bank Details in Trade</h3>
+          <p class="text-center">
+            In today's digital world, email scams and human errors can lead to
+            incorrect bank details being provided. Wiring funds to the wrong
+            account means lost money, lost time, and a damaged business
+            reputation. How can you be 100% sure your payment goes to the
+            intended recipient?
+          </p>
+          <ul>
+            <li>
+              <span class="icon">❌</span> Email phishing and account takeover.
+            </li>
+            <li><span class="icon">❌</span> Manual entry errors.</li>
+            <li><span class="icon">❌</span> Significant financial losses.</li>
+            <li><span class="icon">❌</span> Damaged business relationships.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <h3>How VerifyFlow Works</h3>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-icon">1</div>
+              <h4>Register Invoice Details</h4>
+              <p>
+                As the payee, you register your legitimate bank account details
+                and associated invoice numbers securely on our platform.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon">2</div>
+              <h4>Payer Verifies</h4>
+              <p>
+                As the payer, simply enter the invoice number into VerifyFlow's
+                portal before making a payment.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon">3</div>
+              <h4>Get Verified Details</h4>
+              <p>
+                Receive the cryptographically verified bank name and bank
+                account information you need to wire funds confidently.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon">🔒</div>
+              <h4>Blockchain-Powered Security</h4>
+              <p>
+                All verification data is secured on a public, immutable
+                blockchain (e.g., Ethereum), ensuring tamper-proof records and
+                unmatched trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section id="benefits" class="section-alt">
+        <div class="container">
+          <h3>Key Benefits</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <h4>Fraud Prevention</h4>
+              <p>
+                Eliminate the risk of diverting funds to fraudulent accounts.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>Peace of Mind</h4>
+              <p>
+                Conduct transactions with confidence, knowing your payments are
+                secure.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>Enhanced Trust</h4>
+              <p>
+                Build stronger relationships with trading partners through
+                transparent verification.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>Streamlined Process</h4>
+              <p>
+                Quickly verify details without lengthy phone calls or email
+                chains.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>Global Applicability</h4>
+              <p>
+                Works for both domestic and international trade payments.
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>Immutable Records</h4>
+              <p>
+                Blockchain ensures all registered data is permanent and
+                auditable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section id="call-to-action" class="section">
+        <div class="container text-center">
+          <h2>Ready to Secure Your Payments?</h2>
+          <p>Join VerifyFlow and protect your business from payment fraud.</p>
+          <a href="#contact" class="btn btn-primary btn-large">Get Started Today</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>VerifyFlow</h4>
+            <p>Secure payments, trusted trade.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>
+              Email:
+              <a href="mailto:info@verifyflow.com">info@verifyflow.com</a>
+            </p>
+            <p>Phone: +1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 VerifyFlow. All rights reserved.</p>
+          <p>
+            Made with <span>❤️</span> and blockchain for a safer trade
+            environment.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
