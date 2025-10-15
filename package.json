@@ -1,28 +1,26 @@
 {
-  "name": "invoice-bank-verification",
+  "name": "verifyflow",
   "version": "1.0.0",
-  "description": "Invoice Bank Verification Web App - MVP for verifying bank account details via invoice numbers",
-  "main": "server.js",
+  "description": "Invoice Verification System",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "init-db": "node scripts/init-db.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "invoice",
-    "verification",
-    "banking",
-    "fraud-prevention"
-  ],
+  "keywords": ["invoice", "verification", "banking"],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "pg": "^8.11.3",
-    "ejs": "^3.1.9",
-    "dotenv": "^16.3.1"
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.3"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
