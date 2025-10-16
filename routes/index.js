@@ -5,7 +5,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('pages/home', { 
     title: 'Invoice Bank Verification',
-    message: 'Verify bank account details using invoice number'
+    message: 'Verify bank account details using invoice number',
+    formData: { invoice_number: '' } // Initialize formData
   });
 });
 
