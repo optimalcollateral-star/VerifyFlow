@@ -1,24 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { body, validationResult } = require('express-validator');
 
 // Verify invoice
-router.get('/', [
-  // Validate and sanitize input
-  body('invoice_number')
-    .trim()
-    .notEmpty().withMessage('Invoice number is required')
-    .isAlphanumeric().withMessage('Invoice number should contain only letters and numbers')
-    .escape()
-], (req, res) => {
-  const errors = validationResult(req);
-  
-  if (!errors.isEmpty()) {
-    return res.status(400).render('pages/home', {
-      title: 'Error',
-      errors: errors.array(),
-      formData: req.body
-    });
+router.get('/', (req, res) => {
+  if (!req.query.invoice_number) {
+    return res.redirect('/');
   }
 
   // TODO: Replace with actual database query
