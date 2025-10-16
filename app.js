@@ -1,6 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+
+// Import database connection
+const { db, testConnection } = require('./db');
 
 // Import routes
 const indexRouter = require('./routes/index');
@@ -9,6 +13,25 @@ const adminRouter = require('./routes/admin');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Test database connection on startup
+const initializeApp = async () => {
+  try {
+    const isConnected = await testConnection();
+    if (!isConnected) {
+      console.error('Failed to connect to the database. Exiting...');
+      process.exit(1);
+    }
+    
+    // Start the server
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error('Error initializing application:', error);
+    process.exit(1);
+  }
+};
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
