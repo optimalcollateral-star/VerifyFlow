@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Invoice Bank Verification' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">
+                <a href="/" class="hover:text-blue-200">InvoiceVerify</a>
+            </div>
+            <div class="space-x-4">
+                <a href="/" class="hover:bg-blue-700 px-3 py-2 rounded">Home</a>
+                <a href="/admin" class="hover:bg-blue-700 px-3 py-2 rounded">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <% if (typeof message !== 'undefined') { %>
+            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6" role="alert">
+                <p><%= message %></p>
+            </div>
+        <% } %>
+
+        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert">
+                <p class="font-bold">Please fix the following errors:</p>
+                <ul class="list-disc list-inside">
+                    <% errors.forEach(function(error) { %>
+                        <li><%= error.msg || error %></li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
